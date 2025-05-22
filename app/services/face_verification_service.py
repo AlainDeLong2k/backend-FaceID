@@ -20,6 +20,10 @@ logger = logging.getLogger(__name__)
 # Ví dụ cấu hình cơ bản:
 # logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(module)s: %(message)s')
 
+from pillow_heif import register_heif_opener
+
+register_heif_opener()
+
 
 # --- Hàm tạo kiến trúc backbone (PHẢI GIỐNG HỆT như lúc huấn luyện) ---
 def create_siamese_backbone_service(
